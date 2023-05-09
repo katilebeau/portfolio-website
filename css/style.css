@@ -40,6 +40,11 @@ nav > ul > li > a {
 .row {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
 }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 #work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
 
@@ -48,8 +53,6 @@ selector {
 }
 .logo {
   max-width: 500px;
-  text-align: center;
-  width: 100%;
 }
 
 * {
@@ -117,10 +120,11 @@ img {
     padding: 10px;
     border-radius: 3px;
     border-bottom: 2px solid black; /* width of the border, type, color */
-    transition: 0.2s 
+    transition-duration: 0.2s;
+    transition-property: opacity;
   }
   .button:hover {
-    opacity: 0.5; /* Reduces the opacity of the button to 80% */
+    opacity: 0.8; /* Reduces the opacity of the button to 80% */
     text-decoration: none;
   }
   .button.contact {
@@ -147,15 +151,26 @@ nav {
   float: right;
   margin-top: 4px;
 }
+.col-md-6 {
+  width: 50%;
+}
 }
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
+}
+[class*="col-"] {
+  float: left;
+  padding: 10px;
 }
  
