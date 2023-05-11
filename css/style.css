@@ -53,6 +53,7 @@ selector {
 }
 .logo {
   max-width: 500px;
+  width: 100px;
 }
 
 * {
@@ -94,9 +95,25 @@ h4 {
   font-weight: 400;
 }
 
+footer {
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+.about-img {
+  text-align: center;
+  width: 300px
+}
+
 img {
     width: 100%;
   }
+  .berlin-illustration {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
   a {
     color: lightseagreen;
     text-decoration: none; /* No underlining */
@@ -120,8 +137,7 @@ img {
     padding: 10px;
     border-radius: 3px;
     border-bottom: 2px solid black; /* width of the border, type, color */
-    transition-duration: 0.2s;
-    transition-property: opacity;
+    transition: 0.2s opacity;
   }
   .button:hover {
     opacity: 0.8; /* Reduces the opacity of the button to 80% */
@@ -136,6 +152,12 @@ img {
   .button.contact:hover {
     background-color: lightslategray;
     color: #ffffff;
+  }
+  .social-icons {
+    display: inline-block;
+  }
+  .social-icons img {
+    width: 50px
   }
   
   /* ==============================
@@ -162,6 +184,9 @@ Large devices (1024px or larger)
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+.col-lg-6 {
+  width: 50%;
 }
 }
 /* ==============================
