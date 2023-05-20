@@ -8,17 +8,13 @@ Secondary Color: lighslategray;
 
 header {
   background-color: black;
-  text-align: center;
-  padding: 10px 0;
+  padding: 10px 0 4px;
   width: 100%;
-  
 }
 nav > ul {
   list-style-type: none;
   padding: 0;
-}
-nav > ul > li {
-  display: inline-block;
+  margin: 0;
 }
 nav > ul > li > a {
   padding: 0 15px;
@@ -26,6 +22,32 @@ nav > ul > li > a {
   font-weight: 700;
   color: #4a4a4a;
   width: 100%;
+}
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,127,80,0.5);
+}
+.navtoggle li .icon {
+  position: absolute;
+  text-align: right;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
+  color: lightseagreen;
 }
 .container {
   padding: 0 15px;
@@ -187,17 +209,31 @@ Medium devices (640px and larger)
 @media only screen and (min-width: 640px) {header {
   text-align: unset;
   padding: 20px 0 13px; 
-  max-width: 500px;
+  width: 100%
 }
 
 nav {
   width: auto;
   float: right;
   margin-top: 4px;
+  display: inline-block;
+}
+nav > ul {
+  margin: 1em 0;
+}
+nav > ul > li {
+  display: inline-block;
+}
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+.navtoggle li:last-child {
+  display: none;
 }
 .col-md-6 {
   width: 50%;
 }
+
 }
 /* ==============================
 Large devices (1024px or larger)
@@ -207,19 +243,42 @@ Large devices (1024px or larger)
   margin-left: auto;
   margin-right: auto;
 }
+nav > ul {
+  margin: 1em 0;
+}
+nav > ul > li {
+  display: inline-block;
+}
 .col-lg-6 {
   width: 50%;
+}
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+.navtoggle li:last-child {
+  display: none;
 }
 }
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
-@media only screen and (min-width: 1440px) {header {
-  max-width: 500px;
-}
-}
-[class*="col-"] {
+@media only screen and (min-width: 1440px) 
+{.col-lg-6 {
   float: left;
   padding: 10px;
+}
+nav > ul {
+  margin: 1em 0;
+}
+nav > ul > li {
+  display: inline-block;
+}
+
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+.navtoggle li:last-child {
+  display: none;
+}
 }
  
