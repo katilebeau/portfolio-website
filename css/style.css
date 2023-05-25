@@ -60,7 +60,7 @@ nav > ul > li > a {
 }
 
 .row {
-  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+  margin: 25px 10px; /* 25px top and bottom, 10 left and right */
 }
 .row::after {
   content: "";
@@ -146,7 +146,7 @@ img {
   }
   .button {
     display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-    background-color: lightslategray;
+    background-color: #2a4969;
     color: #ffffff; /* needed to override the default link color */
     font-weight: 400;
     padding: 10px;
